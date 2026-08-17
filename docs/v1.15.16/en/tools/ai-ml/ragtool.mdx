@@ -235,7 +235,7 @@ The `embedding_model` parameter accepts a `crewai.rag.embeddings.types.ProviderS
         "provider": "voyageai",
         "config": {
             "api_key": "your-api-key",
-            "model": "voyage-3",
+            "model": "voyage-4",
             "input_type": "document",
             "truncation": True,
             "output_dtype": "float32",
@@ -248,8 +248,9 @@ The `embedding_model` parameter accepts a `crewai.rag.embeddings.types.ProviderS
 
     **Config Options:**
     - `api_key` (str): VoyageAI API key
-    - `model` (str): Model to use. Default: `voyage-2`. Options: `voyage-3`, `voyage-3-lite`, `voyage-code-3`, `voyage-large-2`
+    - `model` (str): Model to use. Default: `voyage-2`. Current options include `voyage-4`, `voyage-4-lite`, `voyage-4-large`, `voyage-code-4`, `voyage-3.5`, `voyage-3.5-lite`, the contextualized `voyage-context-4`, and the multimodal `voyage-multimodal-3`. See the [VoyageAI model overview](https://docs.voyageai.com/docs/embeddings) for the full catalog.
     - `input_type` (str): Type of input. Options: `document` (for storage), `query` (for search)
+    - Contextualized models (`voyage-context-*`) embed each input string as its own independent document — one vector per input. Cross-input contextualization is not used, so `embed_many`-style batches of unrelated texts behave the same as with plain embedding models.
     - `truncation` (bool): Whether to truncate inputs that exceed max length. Default: `True`
     - `output_dtype` (str): Output data type
     - `output_dimension` (int): Dimension of output embeddings
