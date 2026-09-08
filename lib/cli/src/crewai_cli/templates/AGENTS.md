@@ -948,7 +948,7 @@ crew = Crew(
 )
 ```
 
-Supported providers: OpenAI (default), Ollama, Google AI, Azure OpenAI, Cohere, VoyageAI, Bedrock, Hugging Face.
+Supported providers: OpenAI (default), Ollama, Google AI, Azure OpenAI, Cohere, VoyageAI by MongoDB, Bedrock, Hugging Face.
 
 ---
 
