@@ -227,7 +227,7 @@ rag_tool = RagTool(config=config, summarize=True)
     - `EMBEDDINGS_COHERE_MODEL_NAME`: `model_name`
   </Accordion>
 
-  <Accordion title="VoyageAI">
+  <Accordion title="VoyageAI by MongoDB">
     ```python main.py
     from crewai.rag.embeddings.providers.voyageai.types import VoyageAIProviderSpec
 
@@ -235,7 +235,7 @@ rag_tool = RagTool(config=config, summarize=True)
         "provider": "voyageai",
         "config": {
             "api_key": "your-api-key",
-            "model": "voyage-3",
+            "model": "voyage-3.5",
             "input_type": "document",
             "truncation": True,
             "output_dtype": "float32",
@@ -247,8 +247,8 @@ rag_tool = RagTool(config=config, summarize=True)
     ```
 
     **خيارات الإعداد:**
-    - `api_key` (str): مفتاح API لـ VoyageAI
-    - `model` (str): النموذج المستخدم. القيمة الافتراضية: `voyage-2`. الخيارات: `voyage-3`، `voyage-3-lite`، `voyage-code-3`، `voyage-large-2`
+    - `api_key` (str): مفتاح API لـ VoyageAI by MongoDB
+    - `model` (str): النموذج المستخدم. القيمة الافتراضية: `voyage-2`. الخيارات الحالية: `voyage-4`، `voyage-4-lite`، `voyage-4-large`، `voyage-code-4`، `voyage-4-nano`، `voyage-3.5`، `voyage-3.5-lite`، `voyage-context-4` (سياقي)، `voyage-multimodal-3`، `voyage-finance-2`، `voyage-law-2`. الأسماء القديمة (مثل `voyage-3`، `voyage-code-3`، `voyage-large-2`) لا تزال تعمل.
     - `input_type` (str): نوع الإدخال. الخيارات: `document` (للتخزين)، `query` (للبحث)
     - `truncation` (bool): ما إذا كان يتم اقتطاع المدخلات التي تتجاوز الحد الأقصى. القيمة الافتراضية: `True`
     - `output_dtype` (str): نوع بيانات المخرجات

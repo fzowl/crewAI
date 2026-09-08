@@ -624,12 +624,12 @@ memory = Memory(embedder={
 ```
 </Accordion>
 
-<Accordion title="VoyageAI">
+<Accordion title="VoyageAI by MongoDB">
 ```python
 memory = Memory(embedder={
     "provider": "voyageai",
     "config": {
-        "model": "voyage-3",
+        "model": "voyage-3.5",
         # "api_key": "...",  # or set VOYAGE_API_KEY env var
     },
 })
@@ -707,7 +707,7 @@ memory = Memory(embedder=my_embedder)
 | Google AI | `google-generativeai` | `gemini-embedding-001` | عيّن `GOOGLE_API_KEY`. |
 | Google Vertex | `google-vertex` | `gemini-embedding-001` | يتطلب `project_id`. |
 | Cohere | `cohere` | `embed-english-v3.0` | دعم قوي متعدد اللغات. |
-| VoyageAI | `voyageai` | `voyage-3` | محسّن للاسترجاع. |
+| VoyageAI by MongoDB | `voyageai` | `voyage-3.5` | محسّن للاسترجاع. |
 | AWS Bedrock | `amazon-bedrock` | `amazon.titan-embed-text-v1` | يستخدم بيانات اعتماد boto3. |
 | Hugging Face | `huggingface` | `all-MiniLM-L6-v2` | sentence-transformers محلي. |
 | Jina | `jina` | `jina-embeddings-v2-base-en` | عيّن `JINA_API_KEY`. |

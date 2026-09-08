@@ -624,12 +624,12 @@ memory = Memory(embedder={
 ```
 </Accordion>
 
-<Accordion title="VoyageAI">
+<Accordion title="VoyageAI by MongoDB">
 ```python
 memory = Memory(embedder={
     "provider": "voyageai",
     "config": {
-        "model": "voyage-3",
+        "model": "voyage-3.5",
         # "api_key": "...",  # 또는 VOYAGE_API_KEY 환경 변수 설정
     },
 })
@@ -707,7 +707,7 @@ memory = Memory(embedder=my_embedder)
 | Google AI | `google-generativeai` | `gemini-embedding-001` | `GOOGLE_API_KEY` 설정. |
 | Google Vertex | `google-vertex` | `gemini-embedding-001` | `project_id` 필요. |
 | Cohere | `cohere` | `embed-english-v3.0` | 강력한 다국어 지원. |
-| VoyageAI | `voyageai` | `voyage-3` | 검색에 최적화. |
+| VoyageAI by MongoDB | `voyageai` | `voyage-3.5` | 검색에 최적화. |
 | AWS Bedrock | `amazon-bedrock` | `amazon.titan-embed-text-v1` | boto3 자격 증명 사용. |
 | Hugging Face | `huggingface` | `all-MiniLM-L6-v2` | 로컬 sentence-transformers. |
 | Jina | `jina` | `jina-embeddings-v2-base-en` | `JINA_API_KEY` 설정. |

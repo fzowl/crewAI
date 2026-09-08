@@ -1,4 +1,4 @@
-"""Type definitions for VoyageAI embedding providers."""
+"""Type definitions for VoyageAI by MongoDB embedding providers."""
 
 from typing import Annotated, Literal
 
@@ -6,7 +6,7 @@ from typing_extensions import Required, TypedDict
 
 
 class VoyageAIProviderConfig(TypedDict, total=False):
-    """Configuration for VoyageAI provider."""
+    """Configuration for VoyageAI by MongoDB provider."""
 
     api_key: str
     model: Annotated[str, "voyage-2"]
@@ -19,7 +19,7 @@ class VoyageAIProviderConfig(TypedDict, total=False):
 
 
 class VoyageAIProviderSpec(TypedDict):
-    """VoyageAI provider specification."""
+    """VoyageAI by MongoDB provider specification."""
 
     provider: Required[Literal["voyageai"]]
     config: VoyageAIProviderConfig

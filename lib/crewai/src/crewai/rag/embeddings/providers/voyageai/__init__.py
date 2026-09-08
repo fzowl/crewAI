@@ -1,4 +1,4 @@
-"""VoyageAI embedding providers."""
+"""VoyageAI by MongoDB embedding providers."""
 
 from crewai.rag.embeddings.providers.voyageai.types import (
     VoyageAIProviderConfig,

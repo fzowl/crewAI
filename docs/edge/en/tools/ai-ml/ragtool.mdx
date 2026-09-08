@@ -227,7 +227,7 @@ The `embedding_model` parameter accepts a `crewai.rag.embeddings.types.ProviderS
     - `EMBEDDINGS_COHERE_MODEL_NAME`: `model_name`
   </Accordion>
 
-  <Accordion title="VoyageAI">
+  <Accordion title="VoyageAI by MongoDB">
     ```python main.py
     from crewai.rag.embeddings.providers.voyageai.types import VoyageAIProviderSpec
 
@@ -235,7 +235,7 @@ The `embedding_model` parameter accepts a `crewai.rag.embeddings.types.ProviderS
         "provider": "voyageai",
         "config": {
             "api_key": "your-api-key",
-            "model": "voyage-3",
+            "model": "voyage-3.5",
             "input_type": "document",
             "truncation": True,
             "output_dtype": "float32",
@@ -247,14 +247,22 @@ The `embedding_model` parameter accepts a `crewai.rag.embeddings.types.ProviderS
     ```
 
     **Config Options:**
-    - `api_key` (str): VoyageAI API key
-    - `model` (str): Model to use. Default: `voyage-2`. Options: `voyage-3`, `voyage-3-lite`, `voyage-code-3`, `voyage-large-2`
+    - `api_key` (str): VoyageAI by MongoDB API key
+    - `model` (str): Model to use. Default: `voyage-2`. Current options: `voyage-4`, `voyage-4-lite`, `voyage-4-large`, `voyage-code-4`, `voyage-4-nano`, `voyage-3.5`, `voyage-3.5-lite`, `voyage-context-4` (contextualized), `voyage-multimodal-3`, `voyage-finance-2`, `voyage-law-2`. Legacy names (e.g. `voyage-3`, `voyage-code-3`, `voyage-large-2`) still work.
     - `input_type` (str): Type of input. Options: `document` (for storage), `query` (for search)
     - `truncation` (bool): Whether to truncate inputs that exceed max length. Default: `True`
     - `output_dtype` (str): Output data type
     - `output_dimension` (int): Dimension of output embeddings
     - `max_retries` (int): Maximum number of retry attempts. Default: `0`
     - `timeout` (float): Request timeout in seconds
+
+    <Note>
+    Contextualized models (`voyage-context-4`, `voyage-context-3`) are routed to
+    the `contextualized_embed` endpoint automatically. Inputs are sent as a flat
+    `list[str]` with `enable_auto_chunking=True` and `chunk_size=32000`, so each
+    input is embedded independently as a single vector. Query embeddings
+    (`input_type="query"`) disable auto-chunking, as required by the API.
+    </Note>
 
     **Environment Variables:**
     - `VOYAGEAI_API_KEY` or `EMBEDDINGS_VOYAGEAI_API_KEY`: `api_key`

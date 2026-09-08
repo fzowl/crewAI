@@ -3832,7 +3832,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -3871,7 +3871,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -4891,7 +4891,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -4930,7 +4930,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -6861,7 +6861,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -6900,7 +6900,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -9213,7 +9213,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -9252,7 +9252,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -11993,7 +11993,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -12032,7 +12032,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -13299,7 +13299,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -13338,7 +13338,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -14611,7 +14611,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -14650,7 +14650,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -16106,7 +16106,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -16145,7 +16145,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -18594,7 +18594,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -18633,7 +18633,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -20350,7 +20350,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -20389,7 +20389,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -22535,7 +22535,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -22574,7 +22574,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -24040,7 +24040,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -24079,7 +24079,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -25932,7 +25932,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -25971,7 +25971,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -28159,7 +28159,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -28198,7 +28198,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -29218,7 +29218,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -29257,7 +29257,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -30277,7 +30277,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -30316,7 +30316,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -31336,7 +31336,7 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for VoyageAI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
@@ -31375,7 +31375,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "VoyageAI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"

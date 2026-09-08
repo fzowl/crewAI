@@ -40,7 +40,7 @@ class EmbeddingService:
 
     Supports multiple providers:
     - openai: OpenAI embeddings (text-embedding-3-small, text-embedding-3-large, etc.)
-    - voyageai: Voyage AI embeddings (voyage-2, voyage-large-2, etc.)
+    - voyageai: VoyageAI by MongoDB embeddings (voyage-4, voyage-context-4, voyage-3.5, etc.)
     - cohere: Cohere embeddings (embed-english-v3.0, embed-multilingual-v3.0, etc.)
     - google-generativeai: Google Gemini embeddings (models/embedding-001, etc.)
     - google-vertex: Google Vertex embeddings (models/embedding-001, etc.)
@@ -49,7 +49,7 @@ class EmbeddingService:
     - ollama: Ollama embeddings (nomic-embed-text, etc.)
     - openai: OpenAI embeddings (text-embedding-3-small, text-embedding-3-large, etc.)
     - roboflow: Roboflow embeddings (roboflow-embeddings-v2-base-en, etc.)
-    - voyageai: Voyage AI embeddings (voyage-2, voyage-large-2, etc.)
+    - voyageai: VoyageAI by MongoDB embeddings (voyage-4, voyage-context-4, voyage-3.5, etc.)
     - watsonx: Watson X embeddings (ibm/slate-125m-english-rtrvr, etc.)
     - custom: Custom embeddings (embedding_callable, etc.)
     - sentence-transformer: Sentence Transformers embeddings (all-MiniLM-L6-v2, etc.)
@@ -392,7 +392,7 @@ class EmbeddingService:
     def create_voyage_service(
         cls, model: str = "voyage-2", api_key: str | None = None, **kwargs: Any
     ) -> EmbeddingService:
-        """Create a Voyage AI embedding service."""
+        """Create a VoyageAI by MongoDB embedding service."""
         return cls(provider="voyageai", model=model, api_key=api_key, **kwargs)
 
     @classmethod

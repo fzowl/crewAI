@@ -559,7 +559,7 @@ crew = Crew(
 
 #### Personalizando Provedores de Embedding de Knowledge
 ```python
-# Option 1: Use Voyage AI (recommended by Anthropic for Claude users)
+# Option 1: Use VoyageAI by MongoDB (recommended by Anthropic for Claude users)
 crew = Crew(
     agents=[agent],
     tasks=[...],
@@ -568,7 +568,7 @@ crew = Crew(
         "provider": "voyageai",  # Recommended for Claude users
         "config": {
             "api_key": "your-voyage-api-key",
-            "model": "voyage-3"  # or "voyage-3-large" for best quality
+            "model": "voyage-3.5"  # or "voyage-4-large" for best quality
         }
     }
 )

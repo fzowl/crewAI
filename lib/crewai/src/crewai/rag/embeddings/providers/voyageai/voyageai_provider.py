@@ -1,4 +1,4 @@
-"""Voyage AI embeddings provider."""
+"""VoyageAI by MongoDB embeddings provider."""
 
 from pydantic import AliasChoices, Field
 
@@ -9,11 +9,11 @@ from crewai.rag.embeddings.providers.voyageai.embedding_callable import (
 
 
 class VoyageAIProvider(BaseEmbeddingsProvider[VoyageAIEmbeddingFunction]):
-    """Voyage AI embeddings provider."""
+    """VoyageAI by MongoDB embeddings provider."""
 
     embedding_callable: type[VoyageAIEmbeddingFunction] = Field(
         default=VoyageAIEmbeddingFunction,
-        description="Voyage AI embedding function class",
+        description="VoyageAI by MongoDB embedding function class",
     )
     model: str = Field(
         default="voyage-2",
@@ -21,7 +21,7 @@ class VoyageAIProvider(BaseEmbeddingsProvider[VoyageAIEmbeddingFunction]):
         validation_alias=AliasChoices("EMBEDDINGS_VOYAGEAI_MODEL", "VOYAGEAI_MODEL"),
     )
     api_key: str = Field(
-        description="Voyage AI API key",
+        description="VoyageAI by MongoDB API key",
         validation_alias=AliasChoices(
             "EMBEDDINGS_VOYAGEAI_API_KEY", "VOYAGEAI_API_KEY"
         ),
