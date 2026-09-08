@@ -1,4 +1,4 @@
-"""Type definitions for VoyageAI embedding providers."""
+"""Type definitions for VoyageAI by MongoDB embedding providers."""
 
 from typing import Annotated, Literal
 
@@ -6,10 +6,10 @@ from typing_extensions import Required, TypedDict
 
 
 class VoyageAIProviderConfig(TypedDict, total=False):
-    """Configuration for VoyageAI provider."""
+    """Configuration for VoyageAI by MongoDB provider."""
 
     api_key: str
-    model: Annotated[str, "voyage-2"]
+    model: Annotated[str, "voyage-3.5"]
     input_type: str
     truncation: Annotated[bool, True]
     output_dtype: str
