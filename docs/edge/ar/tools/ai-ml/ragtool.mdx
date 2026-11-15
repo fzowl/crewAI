@@ -237,7 +237,7 @@ rag_tool = RagTool(config=config, summarize=True)
     - `EMBEDDINGS_COHERE_MODEL_NAME`: `model_name`
   </Accordion>
 
-  <Accordion title="VoyageAI">
+  <Accordion title="Voyage AI by MongoDB">
     ```python main.py
     from crewai.rag.embeddings.providers.voyageai.types import VoyageAIProviderSpec
 
@@ -245,10 +245,10 @@ rag_tool = RagTool(config=config, summarize=True)
         "provider": "voyageai",
         "config": {
             "api_key": "your-api-key",
-            "model": "voyage-3",
+            "model": "voyage-4",
             "input_type": "document",
             "truncation": True,
-            "output_dtype": "float32",
+            "output_dtype": "float",
             "output_dimension": 1024,
             "max_retries": 3,
             "timeout": 60.0
@@ -257,14 +257,18 @@ rag_tool = RagTool(config=config, summarize=True)
     ```
 
     **خيارات الإعداد:**
-    - `api_key` (str): مفتاح API لـ VoyageAI
-    - `model` (str): النموذج المستخدم. القيمة الافتراضية: `voyage-2`. الخيارات: `voyage-3`، `voyage-3-lite`، `voyage-code-3`، `voyage-large-2`
+    - `api_key` (str): مفتاح API لـ Voyage AI by MongoDB
+    - `model` (str): النموذج المستخدم. القيمة الافتراضية: `voyage-2`. تشمل الخيارات `voyage-4-large`، `voyage-4`، `voyage-4-lite`، `voyage-code-4`، `voyage-3.5`، `voyage-3.5-lite`، `voyage-finance-2`، `voyage-law-2`، والنماذج السياقية `voyage-context-4` و`voyage-context-3`
     - `input_type` (str): نوع الإدخال. الخيارات: `document` (للتخزين)، `query` (للبحث)
     - `truncation` (bool): ما إذا كان يتم اقتطاع المدخلات التي تتجاوز الحد الأقصى. القيمة الافتراضية: `True`
     - `output_dtype` (str): نوع بيانات المخرجات
-    - `output_dimension` (int): بُعد تضمينات المخرجات
+    - `output_dimension` (int): بُعد تضمينات المخرجات. تقبل النماذج ذات الأبعاد المرنة (مثل `voyage-4`) القيم `2048` أو `1024` (الافتراضي) أو `512` أو `256`
     - `max_retries` (int): الحد الأقصى لمحاولات إعادة المحاولة. القيمة الافتراضية: `0`
     - `timeout` (float): مهلة الطلب بالثواني
+
+    يتم تقسيم الطلبات تلقائيًا بما يتوافق مع حدود الرموز (tokens) والمدخلات لكل نموذج، وتُعاد التضمينات بنفس ترتيب المدخلات.
+
+    **النماذج السياقية** (`voyage-context-4`، `voyage-context-3`): يتم تضمين كل مدخل كمستند مستقل. عند ضبط `input_type` على `document` تقوم Voyage بتقسيم كل مستند إلى أجزاء، ويجب أن يتسع المدخل في جزء واحد بحجم 32,000 رمز ليُعاد متجه واحد. مع `query` أو بدون `input_type` تُرسل المدخلات كما هي دون تقسيم.
 
     **متغيرات البيئة:**
     - `VOYAGEAI_API_KEY` أو `EMBEDDINGS_VOYAGEAI_API_KEY`: `api_key`

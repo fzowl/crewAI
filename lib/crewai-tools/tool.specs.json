@@ -4143,13 +4143,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -4182,7 +4186,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -5314,13 +5318,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -5353,7 +5361,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -7396,13 +7404,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -7435,7 +7447,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -9853,13 +9865,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -9892,7 +9908,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -12745,13 +12761,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -12784,7 +12804,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -14163,13 +14183,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -14202,7 +14226,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -15587,13 +15611,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -15626,7 +15654,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -17194,13 +17222,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -17233,7 +17265,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -20133,13 +20165,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -20172,7 +20208,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -22001,13 +22037,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -22040,7 +22080,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -24298,13 +24338,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -24337,7 +24381,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -25915,13 +25959,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -25954,7 +26002,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -27919,13 +27967,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -27958,7 +28010,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -30275,13 +30327,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -30314,7 +30370,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -31446,13 +31502,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -31485,7 +31545,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -32617,13 +32677,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -32656,7 +32720,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"
@@ -33788,13 +33852,17 @@
             "type": "object"
           },
           "VoyageAIProviderConfig": {
-            "description": "Configuration for VoyageAI provider.",
+            "description": "Configuration for Voyage AI by MongoDB provider.",
             "properties": {
               "api_key": {
                 "title": "Api Key",
                 "type": "string"
               },
               "input_type": {
+                "enum": [
+                  "document",
+                  "query"
+                ],
                 "title": "Input Type",
                 "type": "string"
               },
@@ -33827,7 +33895,7 @@
             "type": "object"
           },
           "VoyageAIProviderSpec": {
-            "description": "VoyageAI provider specification.",
+            "description": "Voyage AI by MongoDB provider specification.",
             "properties": {
               "config": {
                 "$ref": "#/$defs/VoyageAIProviderConfig"

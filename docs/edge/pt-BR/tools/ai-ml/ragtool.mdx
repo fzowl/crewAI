@@ -237,7 +237,7 @@ O parâmetro `embedding_model` aceita um dicionário `crewai.rag.embeddings.type
     - `EMBEDDINGS_COHERE_MODEL_NAME`: `model_name`
   </Accordion>
 
-  <Accordion title="VoyageAI">
+  <Accordion title="Voyage AI by MongoDB">
     ```python main.py
     from crewai.rag.embeddings.providers.voyageai.types import VoyageAIProviderSpec
 
@@ -245,10 +245,10 @@ O parâmetro `embedding_model` aceita um dicionário `crewai.rag.embeddings.type
         "provider": "voyageai",
         "config": {
             "api_key": "your-api-key",
-            "model": "voyage-3",
+            "model": "voyage-4",
             "input_type": "document",
             "truncation": True,
-            "output_dtype": "float32",
+            "output_dtype": "float",
             "output_dimension": 1024,
             "max_retries": 3,
             "timeout": 60.0
@@ -257,14 +257,18 @@ O parâmetro `embedding_model` aceita um dicionário `crewai.rag.embeddings.type
     ```
 
     **Opções de Configuração:**
-    - `api_key` (str): Chave da API VoyageAI
-    - `model` (str): Modelo a ser utilizado. Padrão: `voyage-2`. Opções: `voyage-3`, `voyage-3-lite`, `voyage-code-3`, `voyage-large-2`
+    - `api_key` (str): Chave da API Voyage AI by MongoDB
+    - `model` (str): Modelo a ser utilizado. Padrão: `voyage-2`. As opções incluem `voyage-4-large`, `voyage-4`, `voyage-4-lite`, `voyage-code-4`, `voyage-3.5`, `voyage-3.5-lite`, `voyage-finance-2`, `voyage-law-2` e os modelos contextualizados `voyage-context-4` e `voyage-context-3`
     - `input_type` (str): Tipo de entrada. Opções: `document` (para armazenamento), `query` (para pesquisa)
     - `truncation` (bool): Indica se entradas que excedem o comprimento máximo devem ser truncadas. Padrão: `True`
     - `output_dtype` (str): Tipo de dados da saída
-    - `output_dimension` (int): Dimensão dos embeddings de saída
+    - `output_dimension` (int): Dimensão dos embeddings de saída. Modelos com dimensões flexíveis (como `voyage-4`) aceitam `2048`, `1024` (padrão), `512` ou `256`
     - `max_retries` (int): Número máximo de tentativas. Padrão: `0`
     - `timeout` (float): Tempo limite da solicitação em segundos
+
+    As requisições são divididas automaticamente para respeitar os limites de tokens e de entradas de cada modelo, e os embeddings são retornados na ordem das entradas.
+
+    **Modelos contextualizados** (`voyage-context-4`, `voyage-context-3`): cada entrada é incorporada como um documento independente. Com `input_type` definido como `document`, a Voyage divide cada documento em chunks, e a entrada deve caber em um único chunk de 32.000 tokens para retornar um único vetor. Com `query` ou sem `input_type`, as entradas são enviadas como estão, sem divisão em chunks.
 
     **Variáveis de Ambiente:**
     - `VOYAGEAI_API_KEY` ou `EMBEDDINGS_VOYAGEAI_API_KEY`: `api_key`
