@@ -119,12 +119,18 @@ class VoyageAIEmbeddingFunction(EmbeddingFunction[Documents]):
             List of embedding vectors, one per input.
 
         Raises:
-            ValueError: If a contextualized model splits one input into several
-                chunks, which cannot be returned as a single vector.
+            ValueError: If an input is not a string, or a contextualized model
+                splits one input into several chunks, which cannot be returned
+                as a single vector.
         """
 
         if isinstance(input, str):
             input = [input]
+        if not all(isinstance(text, str) for text in input):
+            raise ValueError(
+                "Voyage AI embeddings expect a flat list of strings, one per "
+                "document; pre-chunked list[list[str]] input is not supported."
+            )
 
         model = self._config.get("model", "voyage-2")
         if model in CONTEXTUALIZED_MODELS:
@@ -134,8 +140,15 @@ class VoyageAIEmbeddingFunction(EmbeddingFunction[Documents]):
     def _batches(
         self, input: Documents, model: str, max_tokens: int | None
     ) -> list[Documents]:
-        """Split ``input`` into batches using the SDK's token counts."""
-        if max_tokens is None:
+        """Split ``input`` into batches using the SDK's token counts.
+
+        The tokenizer is downloaded from Hugging Face, so it is only used when
+        the inputs could exceed the token limit: a token covers at least one
+        byte, plus up to two special tokens per input.
+        """
+        if max_tokens is None or (
+            sum(len(text.encode()) + 2 for text in input) <= max_tokens
+        ):
             token_counts = [0] * len(input)
         else:
             try:

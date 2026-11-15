@@ -172,6 +172,24 @@ def test_unloadable_tokenizer_is_reported_with_the_model_name(client):
     client.tokenize.side_effect = OSError("repository not found")
 
     with pytest.raises(ValueError, match="voyage-nope-9"):
-        _function(model="voyage-nope-9")(["a"])
+        _function(model="voyage-nope-9")(["w" * 130_000])
 
     client.embed.assert_not_called()
+
+
+def test_inputs_far_below_the_token_limit_need_no_tokenizer(client):
+    client.tokenize.side_effect = OSError("no access to huggingface.co")
+
+    result = _function(model="voyage-4")(["a short query"])
+
+    client.tokenize.assert_not_called()
+    assert result == [_vector("a short query")]
+
+
+@pytest.mark.parametrize("model", ["voyage-4", "voyage-context-4"])
+def test_pre_chunked_input_is_rejected(client, model):
+    with pytest.raises(ValueError, match="flat list of strings"):
+        _function(model=model, input_type="document")([["chunk one", "chunk two"]])
+
+    client.embed.assert_not_called()
+    client.contextualized_embed.assert_not_called()
